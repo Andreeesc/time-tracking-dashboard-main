@@ -45,3 +45,9 @@ section{
   max-width: 1080px;
   margin: 50px auto;
 }
+@media (max-width: 767px){
+  section{
+    grid-template-columns: 1fr;
+    padding: 40px 20px
+  }
+}

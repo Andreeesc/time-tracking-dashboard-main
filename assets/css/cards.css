@@ -4,6 +4,13 @@
   grid-template-rows: repeat(2, 1fr);
   gap: 20px;
 }
+@media(max-width:767px){
+  .cards{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 20px;
+  }
+}
 
 .card{
   border-radius: 15px;
@@ -58,6 +65,17 @@
   background-color: var(--darkBlue);
   transition: all ease .5s;
 }
+@media(max-width:767px){
+  .card-info{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .card-info h2,
+  .card-info span{
+    display: inline;
+  }
+}
 .card-info:hover{
   cursor: pointer;
   filter: brightness(1.5);
@@ -65,6 +83,11 @@
 .card-info h2{
   font-size: 3rem;
   font-weight: 300;
+}
+@media(max-width:767px){
+  .card-info h2{
+    font-size: 2rem;
+  }
 }
 .card-info span{
   font-size: 0.75rem;
@@ -84,4 +107,13 @@
 .card-info .card-title span{
   font-size: 1rem;
   color: #fff;
+}
+
+/* Card Hours */
+@media(max-width:767px){
+  .card-hours{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
