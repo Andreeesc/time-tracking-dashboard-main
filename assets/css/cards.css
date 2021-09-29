@@ -1,0 +1,82 @@
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card{
+  border-radius: 15px;
+  position: relative;
+  background-color: var(--darkBlue);
+}
+
+/* Card Image */
+.card-image{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 60px;
+  overflow: hidden;
+}
+.card-image figure{
+  display: block;
+  text-align: right;
+  padding-right: 20px;
+}
+.card-image figure img{
+  width: 60px;
+}
+
+.card:nth-child(1) .card-image{
+  background-color: var(--work);
+}
+.card:nth-child(2) .card-image{
+  background-color: var(--play);
+}
+.card:nth-child(3) .card-image{
+  background-color: var(--study);
+}
+.card:nth-child(4) .card-image{
+  background-color: var(--exercise);
+}
+.card:nth-child(5) .card-image{
+  background-color: var(--social);
+}
+.card:nth-child(6) .card-image{
+  background-color: var(--selfCare);
+}
+
+
+/* Card info */
+.card-info{
+  display: block;
+  position: relative;
+  padding: 20px;
+  margin-top: -15px;
+  border:1px solid transparent;
+  border-radius: 15px;
+  background-color: var(--darkBlue);
+}
+.card-info h2{
+  font-size: 3rem;
+  font-weight: 300;
+}
+.card-info span{
+  font-size: 0.75rem;
+  color: var(--paleBlue);
+}
+
+/* Card Title */
+.card-info .card-title{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.card-info .card-title img{
+  justify-self: flex-end;
+}
+.card-info .card-title span{
+  font-size: 1rem;
+  color: #fff;
+}
