@@ -56,6 +56,11 @@
   border:1px solid transparent;
   border-radius: 15px;
   background-color: var(--darkBlue);
+  transition: all ease .5s;
+}
+.card-info:hover{
+  cursor: pointer;
+  filter: brightness(1.5);
 }
 .card-info h2{
   font-size: 3rem;
