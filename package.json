@@ -1,0 +1,19 @@
+{
+  "name": "time-tracking",
+  "version": "1.0.0",
+  "description": "![Design preview for the Time tracking dashboard coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andreeesc/time-tracking-dashboard-main.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andreeesc/time-tracking-dashboard-main/issues"
+  },
+  "homepage": "https://github.com/Andreeesc/time-tracking-dashboard-main#readme"
+}
