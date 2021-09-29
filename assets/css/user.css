@@ -23,7 +23,7 @@
   color: var(--paleBlue);
 }
 .user-info h1{
-  font-weight: 400;
+  font-weight: 300;
 }
 
 /* user-filter */
@@ -33,7 +33,7 @@
 .user-filter span{
   display: block;
   font-size: 1rem;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: var(--paleBlue);
   cursor: pointer;
 }
