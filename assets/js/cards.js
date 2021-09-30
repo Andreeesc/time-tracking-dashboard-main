@@ -1,44 +1,53 @@
 getData()
 // showData()
 
+const slugify = (text) => {
+  if (!text || typeof text !== 'string') {
+    throw new Error('Parameter "text" must be a string');
+  }
+
+  return text
+    .toString()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]+/g, '')
+    .replace(/--+/g, '-');
+};
+
 async function getData(){
-  let url = await fetch(`../../data.json`)
-  let response = await url.json()
+  const url = await fetch(`../../data.json`)
+  const response = await url.json()
   return response
 }
 
 async function showData(period){
-  let cards = await getData()
-  let html = '' 
-
-  console.log(period)
-
-  cards.forEach(card => {  
+  const cards = await getData()
+  const html = cards.map(({title, timeframes}) => {  
     
-    console.log(card.timeframes.period)
-    
-    let htmlCards = `
+    return `
       <div class="card">
         <div class="card-image">
           <figure>
-            <img src="./assets/images/icon-${card.title.toLowerCase()}.svg" alt="">
+            <img src="./assets/images/icon-${slugify(title)}.svg" alt="">
           </figure>
         </div>
         <div class="card-info">
           <div class="card-title">
-            <span>${card.title}</span>
+            <span>${title}</span>
             <img src="./assets/images/icon-ellipsis.svg" alt="">
           </div>
           <div class="card-hours">
-            <h2>${card.timeframes.period.current}hrs</h2>
-            <span>Last Week - ${card.timeframes.period.previous}hrs</span>
+            <h2>${timeframes[period].current}hrs</h2>
+            <span>Last Week - ${timeframes[period].previous}hrs</span>
           </div>
         </div>
       </div>
     `
-    html += htmlCards
   });
 
   let card = document.querySelector('.cards');
-  card.innerHTML = html;
+  card.innerHTML = html.join('');
 }
