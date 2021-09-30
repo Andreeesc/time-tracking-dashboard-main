@@ -6,7 +6,7 @@ async function getData(){
   return response
 }
 
-async function showData(period){
+async function showData(period, date){
   const cards = await getData()
   const html = cards.map(({title, timeframes}) => {  
     
@@ -24,7 +24,7 @@ async function showData(period){
           </div>
           <div class="card-hours">
             <h2>${timeframes[period].current}hrs</h2>
-            <span>Last Week - ${timeframes[period].previous}hrs</span>
+            <span>Last ${date} - ${timeframes[period].previous}hrs</span>
           </div>
         </div>
       </div>
