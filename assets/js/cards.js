@@ -1,10 +1,14 @@
-getData()
 showData('', 'week')
 
 async function getData(){
-  const url = await fetch(`https://andreeesc.github.io/time-tracking-dashboard-main/data.json`)
-  const response = await url.json()
-  return response
+  try{
+    const url = await fetch(`https://andreeesc.github.io/time-tracking-dashboard-main/data.json`)
+    const response = await url.json()
+    return response
+  } catch(err){
+    console.log(err)
+  }
+  
 }
 
 async function showData(period, date){
