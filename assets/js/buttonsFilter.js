@@ -7,6 +7,6 @@ buttonsFilter.forEach(button => {
       buttonChange.classList.remove('active')
     })
     
-    button.classList.add('active')
+    button.classList.toggle('active')
   })
 })
