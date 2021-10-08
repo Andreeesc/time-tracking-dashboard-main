@@ -2,7 +2,7 @@ getData()
 showData('', 'week')
 
 async function getData(){
-  const url = await fetch(`../data.json`)
+  const url = await fetch(`https://andreeesc.github.io/time-tracking-dashboard-main/data.json`)
   const response = await url.json()
   return response
 }
