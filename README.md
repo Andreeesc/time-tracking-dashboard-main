@@ -1,5 +1,7 @@
 # Frontend Mentor - Time tracking dashboard
 
+This project can be seen at: [https://andreeesc.github.io/time-tracking-dashboard-main/](https://andreeesc.github.io/time-tracking-dashboard-main/)
+
 ![Design preview for the Time tracking dashboard coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
