@@ -54,16 +54,24 @@
     justify-content: space-between;
   }
 }
-.user-filter span{
+
+/* user-filter form */
+.user-filter form div{
   display: block;
+  margin-bottom: 15px;;
+}
+.user-filter form input[type=radio]{
+  visibility: hidden;
+  opacity: 0;
+}
+.user-filter form input[type=radio]:checked + label{
+  color: #fff;
+  filter: brightness(2);
+}
+.user-filter form label{
+  margin-left: -20px;
   font-size: 1rem;
-  margin-bottom: 15px;
   color: var(--paleBlue);
   cursor: pointer;
   filter: brightness(.5);
-}
-.user-filter span.active,
-.user-filter span:hover{
-  color: #fff;
-  filter: brightness(2);
 }

@@ -17,6 +17,7 @@
   <section>
 
     <main class="user">
+
       <div class="user-info">
         <figure>
           <img src="./assets/images/image-jeremy.png" alt="Jeremy Robson" title="Jeremy Robson">
@@ -26,11 +27,24 @@
           <h1>Jeremy Robson</h1>
         </div>
       </div>
+
       <div class="user-filter">
-        <span onclick="showData('daily','Day')">Daily</span>
-        <span onclick="showData('weekly','Week')" class="active">Weekly</span>
-        <span onclick="showData('monthly','Month')">Monthly</span>
+        <form action="">
+          <div>
+            <input type="radio" name="period" value="daily" id="daily" onclick="showData('daily','Day')">
+            <label for="daily">Daily</label>
+          </div>
+          <div>
+            <input type="radio" name="period" value="weekly" id="weekly" checked onclick="showData('weekly','Week')">
+            <label for="weekly">Weekly</label>
+          </div>
+          <div>
+            <input type="radio" name="period" value="monthly" id="monthly" onclick="showData('monthly','Month')">
+            <label for="monthly">Monthly</label>
+          </div>
+        </form>
       </div>
+
     </main>
 
     <aside class="cards"></aside>
@@ -40,7 +54,6 @@
   <script src="./assets/js/slugify.js"></script>
   <script src="./assets/js/getData.js"></script>
   <script src="./assets/js/cards.js"></script>
-  <script src="./assets/js/buttonsFilter.js"></script>
   <script src="./assets/js/cardInfo.js"></script>
 </body>
 </html>
