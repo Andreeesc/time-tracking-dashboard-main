@@ -3,12 +3,15 @@ showData('', 'week')
 async function getData(){
   try{
     const url = await fetch(`https://andreeesc.github.io/time-tracking-dashboard-main/data.json`)
+    console.log(url.status)
+    console.log(url.ok)
+
     const response = await url.json()
+
     return response
   } catch(err){
-    console.log(err)
+    console.error(err)
   }
-  
 }
 
 async function showData(period, date){
